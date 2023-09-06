@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import { useSpellList, Spell } from '../useSpellList';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+import { useSpellList, FavouriteSpellItem } from '../useSpellList';
 
 // Mock useIndexedDB hook
 jest.mock('@/hooks/useIndexDB', () => ({
@@ -36,7 +38,7 @@ describe('useSpellList hook', () => {
   it('should add a spell to the database and trigger a success notification', async () => {
     const { addSpellFromList } = useSpellList();
 
-    const spell: Spell = { name: 'Test Spell', index: 'test-spell' };
+    const spell: FavouriteSpellItem = { name: 'Test Spell', index: 'test-spell' };
 
     // Call the addSpellFromList function
     await addSpellFromList(spell);
@@ -57,7 +59,7 @@ describe('useSpellList hook', () => {
     // Mock an error when adding a spell
     mockDb.items.add.mockRejectedValue('Error adding spell');
 
-    const spell: Spell = { name: 'Test Spell', index: 'test-spell' };
+    const spell: FavouriteSpellItem = { name: 'Test Spell', index: 'test-spell' };
 
     // Call the addSpellFromList function
     await addSpellFromList(spell);

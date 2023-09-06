@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { act } from 'react-dom/test-utils';
 import actualCreate from 'zustand';
 

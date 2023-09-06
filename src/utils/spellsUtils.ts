@@ -1,5 +1,5 @@
 //for the sake of understandability we are not minifying our utility code here
-interface Item {
+export interface Item {
   index: string;
   name: string;
 }

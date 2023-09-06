@@ -1,20 +1,10 @@
-import { currentSpellsUtils, Spell } from '../spellsUtils'; // Replace with the actual path to your utility file
+import { currentSpellsUtils, Item } from '../spellsUtils'; // Replace with the actual path to your utility file
 
 describe('currentSpellsUtils', () => {
-  const spells: Spell[] = [
+  const spells: Item[] = [
     {
       name: 'Spell 1',
-      desc: ['Description 1'],
-      range: 'Range 1',
-      components: ['Component 1'],
-      ritual: false,
-      duration: 'Duration 1',
-      concentration: false,
-      casting_time: 'Casting Time 1',
-      level: 1,
-      school: {
-        name: 'School 1',
-      },
+      index: 'spell_index',
     },
   ];
 
@@ -33,7 +23,7 @@ describe('currentSpellsUtils', () => {
 
   it('should handle empty spells array', () => {
     // Arrange
-    const emptySpells: Spell[] = [];
+    const emptySpells: Item[] = [];
     const itemsPerPage = 5;
     const currentPage = 0;
 
