@@ -16,9 +16,9 @@ To run the project, follow these steps:
 
 1. Copy .env.example file to .env file as :
 
-	```bash
-	cp .env.example .env
-	```
+   ```bash
+   cp .env.example .env
+   ```
 
 2. Install project dependencies using Yarn:
 
@@ -91,3 +91,4 @@ To deploy the project using Docker, follow these steps:
 
 Now, your SPELLS_APP project should be up and running within a Docker container, accessible at `http://localhost:8080`.
 
+PS: We need to upgrade yarn to berry version for this to run.
